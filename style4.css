@@ -1,0 +1,351 @@
+h1 {
+    color: #00008B; 
+    text-align: center; 
+}
+
+h2 {
+    font-weight: bold !important;
+}
+
+h2 {
+    color: #800000; 
+    border-bottom: 2px solid #800000;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.bold_text {
+    color: #126874; 
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+.standout {
+    color: #FF0000; 
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.standout {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.3; }
+}
+
+p {
+    line-height: 1.8; 
+    color: #444; 
+}
+h3 + img + p + p, 
+p + img + p + p {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); 
+    border-left: 4px solid #000080; 
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    font-style: italic; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05); 
+    margin: 15px 0;
+}
+
+h3:first-of-type + p {
+    background: #ffffff;
+    border-top: 4px solid #000080;   
+    border-bottom: 4px solid #000080; 
+    padding: 30px;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.1);
+    position: relative;
+    font-style: italic;
+}
+h3:first-of-type + p::before {
+    content: "“";
+    font-size: 80px;
+    color: rgba(0, 0, 128, 0.1); 
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: serif;
+}
+
+img {
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    margin: 8px;
+}
+
+img:nth-of-type(1):hover { transform: scale(1.1); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+img:nth-of-type(2):hover { transform: scale(0.95); opacity: 0.9; }
+
+img:nth-of-type(3):hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.3); 
+}
+
+img:nth-of-type(4):hover { transform: rotate(5deg) scale(1.1); }
+
+img:nth-of-type(5) { filter: grayscale(100%); }
+img:nth-of-type(5):hover { filter: grayscale(0%); transform: scale(1.1); }
+
+img:nth-of-type(6):hover { transform: rotateY(180deg); }
+
+img:nth-of-type(7) { filter: blur(3px); }
+img:nth-of-type(7):hover { filter: blur(0); transform: scale(1.1); }
+
+img:nth-of-type(8):hover {
+    animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+img:nth-of-type(9):hover {
+    border: 3px solid #3399ff;
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 0 15px #3399ff;
+}
+
+
+
+h2:nth-of-type(3) ~ p a {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 5px 0;
+    color: #000080; 
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+h2:nth-of-type(3) ~ p a:hover {
+    transform: translateX(10px); 
+    background-color: #f0f5ff; 
+    color: #FF0000; /
+    box-shadow: -5px 0px 0px #800000; 
+}
+
+h2:nth-of-type(3) ~ h3:last-of-type + p a {
+    background-color: #B0E0E6; 
+    color: #000080;
+    padding: 10px 20px;
+    border: 1px solid #000080;
+    animation: pulse-button 2s infinite; 
+}
+
+@keyframes pulse-button {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+h2:nth-of-type(3) ~ h3:last-of-type + p a:hover {
+    animation: none;
+    background-color: #000080;
+    color: #ffffff;
+    transform: translateY(-3px); 
+}
+
+h1 {
+    color: #000080;
+    display: block;
+    margin: 20px auto;
+    cursor: default;
+    
+    animation: title-bounce 2s ease-in-out infinite;
+    
+    padding: 10px;
+}
+
+@keyframes title-bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05); 
+        text-shadow: 0px 15px 20px rgba(0,0,128,0.2); 
+    }
+}
+
+h1:hover {
+    color: #3299b3;
+    transition: color 0s ease;
+}
+
+body {
+    /* 1. 設定背景相片 - 建議用一張高質嘅排球場或比賽相 */
+    /* 你可以將括號入面換成你 Simple Image 資料夾入面嘅相片路徑 */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                      url('Simple Image/LSP_18218.jpg'); 
+    
+    /* 2. 令相片鋪滿全個螢幕且唔會隨捲動郁動 (好高級嘅效果) */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+ 
+    margin: 0;
+    padding: 20px;
+}
+
+h3:first-of-type + p {
+    background: rgba(255, 255, 255, 0.9); /* 變微透明白色 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 加深陰影 */
+}
+.image1 {
+    width: 100% !important;
+    height: 350px !important;    /* 設定固定高度，確保兩張相一樣大 */
+    object-fit: cover;           /* 核心！自動裁剪並填充，相片唔會變形 */
+    object-position: center;     /* 居中裁剪 */
+    border-radius: 10px;
+    display: block;
+}
+
+/* 2. 統一教練介紹框框高度並對齊 */
+.coach-bio {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    border-left: 4px solid #000080;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    margin: 15px 0;
+    
+    /* 對齊關鍵：設定最小高度，確保兩邊框框視覺上對齊 */
+    /* 建議設為 220px，如果文字再長可以再加 */
+    min-height: 220px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 3. 確保名字 Hei 同 Travis 對齊 */
+.w3-half strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #000080;
+    text-align: left;
+}
+
+.video-container {
+    text-align: center;    /* 讓內部的 iframe 居中 */
+    margin: 30px auto;     /* 上下留白，左右自動置中 */
+    width: 95%;            /* 在小螢幕時佔 95% 闊度 */
+    max-width: 1000px;     /* 你可以調整呢個數字嚟控制「變大」嘅程度 */
+}
+
+/* 讓影片在容器內自動充滿闊度，並保持比例 */
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;  /* 保持標準 16:9 比例 */
+    border-radius: 15px;   /* 加返少少圓角會更型 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* 加個陰影等佢更有層次 */
+}
+
+.fa {
+    font-family: 'FontAwesome' !important;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. 如果你想 Icon 更有色，可以加呢段 (Optional) */
+.fa-facebook-official { color: #3b5998; } /* Facebook 藍 */
+.fa-instagram { color: #e4405f; }         /* Instagram 紅 */
+
+.w3-xlarge i:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+img {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+.w3-row-padding, .w3-half, .w3-third {
+    overflow: visible !important;
+}
+
+/* 1. Hei: 懸浮放大 */
+.img-1:hover { transform: scale(1.1) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important; }
+
+/* 2. Travis: 懸浮縮小 */
+.img-2:hover { transform: scale(0.95) !important; opacity: 0.8 !important; }
+
+/* 4. 細圖 1: 向右傾斜 */
+.img-4:hover { transform: rotate(10deg) scale(1.15) !important; }
+
+.img-5:hover { 
+    transform: scale(0.9) !important; /* 輕微縮小 */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5) !important; /* 內陰影，好似撳咗落去咁 */
+    filter: brightness(0.8) !important; /* 變暗少少 */
+}
+
+/* 6. 細圖 3: 3D 水平翻轉 */
+.img-6:hover { transform: rotateY(180deg) !important; }
+
+.img-7:hover { 
+    filter: brightness(1.5) contrast(1.2) !important; /* 變亮、對比增強 */
+    transform: scale(1.1) !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important; /* 白色發光效果 */
+}
+
+/* 8. 細圖 5: 跳動 (Bounce) */
+.img-8:hover { animation: final-bounce 0.5s infinite alternate !important; }
+
+/* 9. 細圖 6: 粉藍邊框 + 逆時針轉 */
+.img-9:hover { 
+    border: 4px solid #3399ff !important; 
+    transform: rotate(-10deg) scale(1.15) !important; 
+    box-shadow: 0 0 15px #3399ff !important;
+}
+
+/* 動畫定義 */
+@keyframes final-bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-15px); }
+}
+
+.img-2 {
+    width: 100% !important;
+    height: 450px !important;    /* 由 300px 加大到 450px，咁就唔會太短 */
+    object-fit: cover !important; 
+    object-position: center bottom !important; /* 繼續維持對準底部，剪走上面 */
+    border-radius: 15px;
+}
+
+.coach-bio {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    border-left: 4px solid #000080;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    
+    /* 核心修改：刪除或重設 min-height 嚟切斷空白位 */
+    min-height: 0 !important; 
+    
+    /* 縮細段落之間嘅間距 */
+    margin-top: 5px !important;
+    margin-bottom: 20px !important; 
+}
+
+/* 確保 Coach 名字同下面段字貼啲 */
+.w3-container p strong {
+    display: block;
+    margin-bottom: 0px !important;
+}
